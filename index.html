@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="description"
+         content="A private, offline-first weekly todo tracker."
+      />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-title" content="True To-do" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <link rel="icon" href="./favicon.ico" sizes="48x48" />
+      <link rel="apple-touch-icon" href="./apple-touch-icon-180x180.png" />
+      <script>
+         (() => {
+            const theme = localStorage.getItem("true-todo-theme");
+            if (theme === "dark") {
+               document.documentElement.dataset.theme = "dark";
+               document.documentElement.style.colorScheme = "dark";
+            }
+         })();
+      </script>
+      <title>True To-do</title>
+     <script type="module" crossorigin src="/TrueTodo-Pages/assets/index-DWzb98Q3.js"></script>
+     <link rel="stylesheet" crossorigin href="/TrueTodo-Pages/assets/index-nF4AE9UV.css">
+   <link rel="manifest" href="/TrueTodo-Pages/manifest.webmanifest"></head>
+   <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+   </body>
+</html>
