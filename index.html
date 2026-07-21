@@ -10,23 +10,31 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="True To-do" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="theme-color" content="#f5f6fb" />
       <link rel="icon" href="./favicon.ico" sizes="48x48" />
       <link rel="apple-touch-icon" href="./apple-touch-icon-180x180.png" />
       <script>
          (() => {
-            const theme = localStorage.getItem("true-todo-theme");
+            // Keep these page colors in sync with --page in src/index.css.
+            const pageColor = { light: "#f5f6fb", dark: "#11141b" };
+            const theme =
+               localStorage.getItem("true-todo-theme") === "dark"
+                  ? "dark"
+                  : "light";
             if (theme === "dark") {
                document.documentElement.dataset.theme = "dark";
                document.documentElement.style.colorScheme = "dark";
             }
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", pageColor[theme]);
          })();
       </script>
       <title>True To-do</title>
-     <script type="module" crossorigin src="/TrueTodo-Pages/assets/index-CXI-BMe9.js"></script>
-     <link rel="stylesheet" crossorigin href="/TrueTodo-Pages/assets/index-nF4AE9UV.css">
+     <script type="module" crossorigin src="/TrueTodo-Pages/assets/index-DHEbx9eo.js"></script>
+     <link rel="stylesheet" crossorigin href="/TrueTodo-Pages/assets/index-CPiMpvg9.css">
    <link rel="manifest" href="/TrueTodo-Pages/manifest.webmanifest"></head>
    <body>
       <noscript>You need to enable JavaScript to run this app.</noscript>
-      <div id="root"></div>
+      <div id="root"></div>
    </body>
 </html>
